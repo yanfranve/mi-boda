@@ -1,0 +1,301 @@
+@font-face {
+    font-family: 'Lovers Quarrel'; /* Nombre de la fuente */
+    src: url('../fonts/LoversQuarrel-Regular.ttf') format('truetype'); /* Ruta al archivo de fuente y formato */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    /* background-image: url('../img/fondo.jpeg'); */
+    background-color: #FFFAF0; /* Cambia el color de fondo según tus preferencias */
+    font-family: 'Lovers Quarrel', Arial, sans-serif;
+    h1 {
+        font-family: 'Lovers Quarrel', Arial, sans-serif;
+    }
+}
+
+/* estilos.css */
+
+/* Estilos generales para el contenedor */
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 300px; /* Ajusta el ancho máximo según tus necesidades */
+}
+
+/* Estilos para la sección "Mesa de Regalo" */
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 300px; /* Ajusta el ancho máximo según tus necesidades */
+}
+.contenedor2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 15000px; 
+
+}
+
+
+.regalo {
+    width: 180%;
+    padding-bottom: 40%;
+    background-color: #FFFAF0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 20px; /* Espacio entre las secciones */
+}
+.regalo:hover .contenido {
+    display: block;
+}
+
+.contenido {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.cont{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 5px; /* Espacio superior en pantallas grandes */
+    color: #131312;
+
+}
+
+.titulo {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 40px; /* Espacio superior en pantallas grandes */
+    color: #666666;
+}
+
+/* Estilos para la sección "Sugerencia de Vestimenta" */
+.sugerencia-vestimenta {
+    background-color: #FFFAF0;
+    border: 0px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 40px; /* Espacio entre las secciones */
+}
+
+.sugerencia-vestimenta h2 {
+    font-size: 60px;
+    color: #5f5c5c;
+}
+
+.sugerencia-vestimenta h3 {
+    font-size: 40px;
+    color: #666;
+    margin-top: 20px;
+}
+
+.imagen-vestimenta img {
+    max-width: 2000%;
+    height: auto;
+}
+
+  /* Estilos para la sección de eventos */
+  .event-sections {
+    display: flex;
+    justify-content: space-between; /* Alinea horizontalmente las secciones */
+    padding: 50px;
+    box-sizing: border-box;
+    max-width: 900px; /* Ajusta el ancho máximo de las secciones */
+    margin: 0 auto; /* Centra las secciones horizontalmente */
+}
+
+.event {
+    width: 80%;
+    width: 800px;
+    height: 400px;
+    text-align: center;
+    background-color: #FFFAF0;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.event img {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+/* Estilos para el botón de ver mapa */
+.map-button {
+    background-color: #fbedd2;
+    color: #3937378f;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.map-button:hover {
+    background-color: #ef656557;
+}
+
+/* Estilos para los campos editables */
+.editable-field {
+    border: 1px solid #FFFAF0;
+    padding: 5px;
+    border-radius: 5px;
+    width: 500%;
+    margin: 5px 0;
+    
+}
+
+#formulario {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #FFFAF0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(245, 242, 242, 0.951);
+}
+.formulario {
+    width: 400px;
+    margin: 0 auto;
+    
+}
+
+h2 {
+   
+    text-align: center;
+}
+
+.campo {
+    margin-bottom: 50px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 1px;
+    border: 1px solid #FFFAF0;
+    border-radius: 5px;
+    background-color: #f2e6d0;
+}
+
+select {
+    height: 50px;
+}
+.campo input[type="text"],
+.campo input[type="tel"] {
+    width: 450px;
+    height: 30px;
+    padding: 5px;
+    font-size: 25px;
+}
+.campo.mensaje textarea {
+    width: 2500%;
+    height: 1500px;
+    padding: 5px;
+    font-size: 50px;
+}
+.campo.confirmacion input[type="text"] {
+    width: 80%;
+    height: 20px;
+    padding: 5px;
+    font-size: 50px;
+    background-color: #f5f5f5;
+    color: #888;
+    border: 0px solid #ccc;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pUnTVX{
+    display:flex;
+    flex:2;
+    flex-direction:column;
+    position:relative}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#enviar {
+    background-color: #f7dea8;
+    color: rgb(0, 0, 0);
+}
+
+#whatsapp {
+    background-color: #F7DEA8;
+    color: rgb(12, 11, 11);
+}
+
+body {
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+    padding:0; /* Elimina el relleno predeterminado del cuerpo */
+    background-color: #FFFAF0; /* Color de fondo en caso de que la imagen no se cargue o se muestre parcialmente */
+}
+
+/* Encabezado con la imagen de fondo */
+header {
+    background-image: url('../img/img6.png') ; /* Agrega la nueva imagen de fondo */
+    background-repeat: no-repeat, no-repeat; /* No repetir las imágenes */
+    background-size: cover, auto; /* Ajusta la primera imagen para cubrir y la segunda a su tamaño original */
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Coloca el contenido en la parte inferior */
+    align-items: center;
+    text-align: center;
+    color: #191717;
+}
+header h1 {
+    margin: 0;
+    padding: 20px; /* Espacio entre la imagen de fondo y el título */
+    font-size: 80px; /* Tamaño del título */
+    position: absolute; /* Posición absoluta para que esté encima de la segunda imagen */
+    top: 0; /* Alinea el título en la parte superior del encabezado */
+}
+
+/* Estilos para el contenido en la parte superior */
+.content {
+    font-size: 60px;
+    padding: 20px;
+    background-color: rgba(243, 239, 239, 0.5); /* Fondo semi-transparente para que el texto sea legible */
+}
+.content p {
+    margin: 0; /* Elimina el margen predeterminado de las etiquetas <p> */
+    padding: 10px 0; /* Espacio vertical alrededor de las etiquetas <p> */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
