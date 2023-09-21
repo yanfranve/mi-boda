@@ -66,7 +66,7 @@ h1 {
 .regalo {
     width: 180%;
     padding-bottom: 40%;
-    background-color: #FFFAF0;
+    background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 10px;
     position: relative;
@@ -106,7 +106,7 @@ h1 {
 
 /* Estilos para la sección "Sugerencia de Vestimenta" */
 .sugerencia-vestimenta {
-    background-color: #FFFAF0;
+    background-color: #ffffff;
     border: 0px solid #ddd;
     border-radius: 10px;
     padding: 20px;
@@ -144,7 +144,7 @@ h1 {
     width: 800px;
     height: 400px;
     text-align: center;
-    background-color: #FFFAF0;
+    background-color: #ffffff;
     padding: 40px;
     border-radius: 10px;
     color: #191717;
@@ -155,7 +155,7 @@ h1 {
 .event {
     width: 300px;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     text-align: left;
   }
   
@@ -250,7 +250,7 @@ h1 {
     margin: 20px auto; /* Centra vertical y horizontalmente el botón */
     max-width: 20%; /* Ancho máximo del 30% del contenedor */
     height: 30px; /* Alto del botón, puedes ajustarlo según tus necesidades */
-    background-color: #f8e3b8;
+    background-color: #FFFAF0;
     color: #181515;
     padding: 20px 15px;
     text-decoration: none;
@@ -301,7 +301,7 @@ h1 {
     max-width: 550px;
     margin: 0 auto;
     padding: 15px;
-    background-color: #FFFAF0;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(245, 242, 242, 0.951);
 }
