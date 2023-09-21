@@ -114,7 +114,7 @@ form, input, textarea, select, button {
 } */
 
 .carrousel {
-  width: 92%;
+  width: 100%;
   max-width: 120em;
   padding: 2em;
   color: var(--negro);
@@ -126,7 +126,7 @@ form, input, textarea, select, button {
 }
 
 .carrousel .grande {
-  width: 120%;
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
