@@ -6,13 +6,29 @@
 }
 
 body {
-    /* background-image: url('../img/fondo.jpeg'); */
-    background-color: #FFFAF0; /* Cambia el color de fondo según tus preferencias */
-    font-family: 'Lovers Quarrel', Arial, sans-serif;
-    h1 {
-        font-family: 'Lovers Quarrel', Arial, sans-serif;
-    }
+    background-image: url('../img/fondo.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Cubre todo el contenedor sin distorsión */
+    background-position: center top; /* Centra la imagen en la parte superior */
+    background-color: #FFFAF0;
+    font-family:  Arial, sans-serif;
+    margin: 0; /* Elimina márgenes para que el contenido llegue al borde del marco */
+    padding: 0; /* Elimina relleno para que el contenido llegue al borde del marco */
+    min-height: 200vh; /* Asegura que el marco ocupe al menos toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
 }
+
+.conten {
+    flex: 1; /* Hace que el contenido se expanda para llenar el espacio restante */
+    padding: 20px; /* Añade un relleno para que el contenido no llegue al borde del marco */
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+h1 {
+    font-family: 'Lovers Quarrel', Arial, sans-serif;
+}
+
 
 /* estilos.css */
 
@@ -75,7 +91,7 @@ body {
 }
 .cont{
     text-align: center;
-    font-size: 35px;
+    font-size: 25px;
     margin-top: 5px; /* Espacio superior en pantallas grandes */
     color: #131312;
 
@@ -83,7 +99,7 @@ body {
 
 .titulo {
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     margin-top: 40px; /* Espacio superior en pantallas grandes */
     color: #666666;
 }
@@ -98,7 +114,7 @@ body {
 }
 
 .sugerencia-vestimenta h2 {
-    font-size: 60px;
+    font-size: 45px;
     color: #5f5c5c;
 }
 
@@ -131,29 +147,145 @@ body {
     background-color: #FFFAF0;
     padding: 40px;
     border-radius: 10px;
+    color: #191717;
+
 }
 
-.event img {
-    max-width: 500px;
-    max-height: 500px;
+/* Estilo para el contenedor .event */
+.event {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  /* Estilo para la imagen */
+
+  
+  .event img {
+      width: 100px;
+    height: auto;
+  }
+  
+  /* Estilo para el título h2 */
+  .event h2 {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilo para el contenedor de elementos del evento */
+  .event-items {
+    display: flex;
+    flex-direction: column; /* Establecer un flujo vertical */
+  }
+  
+  .event-item {
+    display: flex; /* Mantener elementos en fila para alinear los iconos y el contenido */
+    align-items: center; /* Centrar verticalmente los elementos dentro de .event-item */
+    margin-bottom: 10px; /* Espacio vertical entre los .event-item */
+  }
+  .icon {
+    display: flex; /* Mantener elementos en fila para alinear las imágenes */
+    justify-content: flex-end; /* Alinear las imágenes a la derecha */
+    margin-right: 10px; /* Espacio horizontal entre las imágenes y la hora/texto */
+  }
+  /* Estilo para la imagen del icono */
+  .icon-image {
+    max-width: 50px; /* Ajusta el ancho máximo de la imagen */
+    margin-right: 20px; /* Separación horizontal entre la imagen y el siguiente elemento */
+  }
+  
+  /* Estilo para cada elemento del evento */
+  .event-item {
+    display: flex;
+  align-items: center;
+    justify-content: center;
+    margin: 2px 0; /* Separación vertical entre cada .event-item */
+  }
+
+/* Estilo para el icono */
+.icon {
+    font-size: 18px;
+    margin-right: 20px;
 }
 
-/* Estilos para el botón de ver mapa */
-.map-button {
-    background-color: #fbedd2;
-    color: #3937378f;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+/* Estilo para la hora del evento */
+.event-time {
+    margin-right: 10px; /* Separación horizontal entre .icon-image y .event-time */
+  }
+
+/* Estilo para los elementos <p> */
+.event p {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+.event h2,
+.event p {
+    margin: 10px 0; /* 10px de separación arriba y abajo, 0 a los lados */
+}
+.event h3{
+    color: #000000;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+.event-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    text-align: center; /* Centrar el texto */
+}
+.event-image {
+  display: block;
+  margin: 0 auto; /* Centrar horizontalmente */
+  max-width: 100%; /* Ajustar el ancho máximo */
+  height: auto; /* Mantener la proporción original */
+}
+.event-label {
+    font-weight: bold; /* Estilo personalizado para etiquetas */
+  }
+  
+
+.map-button-container {
+    margin: 20px auto; /* Centra vertical y horizontalmente el botón */
+    max-width: 20%; /* Ancho máximo del 30% del contenedor */
+    height: 30px; /* Alto del botón, puedes ajustarlo según tus necesidades */
+    background-color: #f8e3b8;
+    color: #181515;
+    padding: 20px 15px;
     text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
     border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
 }
 
-.map-button:hover {
-    background-color: #ef656557;
+
+  
+  
+  .map-button:hover {
+    background-color: #2980b9; /* Cambiar el color de fondo al pasar el mouse */
+    color: #ffffff; /* Cambiar el color del texto al pasar el mouse */
+  }
+   */
+
+
+.event-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
 }
+
+.map-button-container {
+    margin-top: 0px; /* Espacio entre el botón y las secciones de evento */
+}
+
+.mesa-de-regalos {
+    margin-top: 70px; /* Espacio entre la sección "Mesa de Regalos" y el botón */
+}
+
+  
 
 /* Estilos para los campos editables */
 .editable-field {
@@ -166,7 +298,7 @@ body {
 }
 
 #formulario {
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 auto;
     padding: 15px;
     background-color: #FFFAF0;
@@ -174,12 +306,19 @@ body {
     box-shadow: 0px 0px 10px rgba(245, 242, 242, 0.951);
 }
 .formulario {
-    width: 400px;
+    width: 500px;
     margin: 0 auto;
     
 }
+.h2{
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
 
 h2 {
+   
+
    
     text-align: center;
 }
@@ -213,7 +352,7 @@ select {
     width: 450px;
     height: 30px;
     padding: 5px;
-    font-size: 25px;
+    font-size: 15px;
 }
 .campo.mensaje textarea {
     width: 2500%;
@@ -225,7 +364,7 @@ select {
     width: 80%;
     height: 20px;
     padding: 5px;
-    font-size: 50px;
+    font-size: 20px;
     background-color: #f5f5f5;
     color: #888;
     border: 0px solid #ccc;
@@ -257,6 +396,7 @@ button {
 #whatsapp {
     background-color: #F7DEA8;
     color: rgb(12, 11, 11);
+    font-size:12px;
 }
 
 body {
@@ -270,7 +410,7 @@ header {
     background-image: url('../img/img6.png') ; /* Agrega la nueva imagen de fondo */
     background-repeat: no-repeat, no-repeat; /* No repetir las imágenes */
     background-size: cover, auto; /* Ajusta la primera imagen para cubrir y la segunda a su tamaño original */
-    height: 75vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* Coloca el contenido en la parte inferior */
@@ -280,22 +420,34 @@ header {
 }
 header h1 {
     margin: 0;
+    color: #e69a17;
     padding: 20px; /* Espacio entre la imagen de fondo y el título */
-    font-size: 80px; /* Tamaño del título */
+    font-size: 150px; /* Tamaño del título */
     position: absolute; /* Posición absoluta para que esté encima de la segunda imagen */
     top: 0; /* Alinea el título en la parte superior del encabezado */
 }
-
+header p{
+    color: #0f0d0a;
+    font-size: 30px;
+}
 /* Estilos para el contenido en la parte superior */
 .content {
     font-size: 60px;
     padding: 20px;
     background-color: rgba(243, 239, 239, 0.5); /* Fondo semi-transparente para que el texto sea legible */
 }
-.content p {
+.content2 h2{
+    color: #000;
+    font-family: 'Lovers Quarrel';
+    font-size: 180px;
+
+
+}
+.content2 p {
     margin: 0; /* Elimina el margen predeterminado de las etiquetas <p> */
     padding: 10px 0; /* Espacio vertical alrededor de las etiquetas <p> */
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 30px;
 }
