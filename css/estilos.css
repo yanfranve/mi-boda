@@ -244,26 +244,6 @@ h1 {
 .event-label {
     font-weight: bold; /* Estilo personalizado para etiquetas */
   }
-  
-
-.map-button-container {
-    margin: 20px auto; /* Centra vertical y horizontalmente el botón */
-    max-width: 20%; /* Ancho máximo del 30% del contenedor */
-    height: 30px; /* Alto del botón, puedes ajustarlo según tus necesidades */
-    background-color: #a6f1fb;
-    color: #181515;
-    padding: 20px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-}
-
-
-  
-  
-  
-
 
 .event-container {
     display: flex;
@@ -466,3 +446,24 @@ header p{
     justify-content: center;
     font-size: 30px;
 }
+
+@media screen and (max-width: 1220px){
+    .conten,.event,
+    .event-container,
+    .header-container,
+    .contenedor,.content2,
+    .mesa-de-regalos,.contenedor,.contenido.cont,.contenedor2,.imagen-vestimenta{
+        max-width: 1000px;
+        padding: 0 20px;
+    
+
+    }
+   
+}
+/* Cambia la dirección de flexión a columna en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .event-container,.event,.event-sections {
+      display: flex;
+      flex-direction: column;
+    }
+  }
