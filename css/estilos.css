@@ -107,25 +107,25 @@ h1 {
 /* Estilos para la sección "Sugerencia de Vestimenta" */
 .sugerencia-vestimenta {
     background-color: #ffffff;
-    border: 0px solid #ddd;
+    border: 0px solid #ffffff;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 40px; /* Espacio entre las secciones */
 }
 
 .sugerencia-vestimenta h2 {
-    font-size: 45px;
+    font-size: 25px;
     color: #5f5c5c;
 }
 
 .sugerencia-vestimenta h3 {
-    font-size: 40px;
+    font-size: 20px;
     color: #666;
     margin-top: 20px;
 }
 
 .imagen-vestimenta img {
-    max-width: 2000%;
+    max-width: 200%;
     height: auto;
 }
 
@@ -229,12 +229,7 @@ h1 {
     font-family: Arial, sans-serif;
 }
 
-.event-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrar horizontalmente */
-    text-align: center; /* Centrar el texto */
-}
+
 .event-image {
   display: block;
   margin: 0 auto; /* Centrar horizontalmente */
@@ -245,13 +240,7 @@ h1 {
     font-weight: bold; /* Estilo personalizado para etiquetas */
   }
 
-.event-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    
-}
+
 
 .map-button-container {
     margin-top: 0px; /* Espacio entre el botón y las secciones de evento */
@@ -431,10 +420,10 @@ header p{
     padding: 20px;
     background-color: rgba(243, 239, 239, 0.5); /* Fondo semi-transparente para que el texto sea legible */
 }
-.content2 h2{
+.content2 h1{
     color: #000;
     font-family: 'Lovers Quarrel';
-    font-size: 180px;
+    font-size: 100px;
 
 
 }
@@ -467,3 +456,11 @@ header p{
       flex-direction: column;
     }
   }
+
+  /* Estilo para pantallas más pequeñas (menos de 393px) */
+@media (max-width: 800px) {
+    .content2 h1.display-4 {
+      font-size: 24px; /* Tamaño de texto personalizado para pantallas pequeñas */
+    }
+  }
+  
