@@ -14,7 +14,8 @@ body {
     font-family:  Arial, sans-serif;
     margin: 0; /* Elimina márgenes para que el contenido llegue al borde del marco */
     padding: 0; /* Elimina relleno para que el contenido llegue al borde del marco */
-    min-height: 200vh; /* Asegura que el marco ocupe al menos toda la altura de la ventana */
+
+ /* Asegura que el marco ocupe al menos toda la altura de la ventana */
     display: flex;
     flex-direction: column;
 }
@@ -383,37 +384,45 @@ button {
     font-size: 12px;
 }
 
-body {
-    margin: 0; /* Elimina el margen predeterminado del cuerpo */
-    padding:0; /* Elimina el relleno predeterminado del cuerpo */
-    background-color: #FFFAF0; /* Color de fondo en caso de que la imagen no se cargue o se muestre parcialmente */
-}
 
 /* Encabezado con la imagen de fondo */
 header {
-    background-image: url('../img/img6.png') ; /* Agrega la nueva imagen de fondo */
-    background-repeat: no-repeat, no-repeat; /* No repetir las imágenes */
-    background-size: cover, auto; /* Ajusta la primera imagen para cubrir y la segunda a su tamaño original */
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Coloca el contenido en la parte inferior */
-    align-items: center;
-    text-align: center;
-    color: #191717;
+    /* background-image: url('../img/img6.png'); */
+     /* Agrega la nueva imagen de fondo */
+   
 }
+/* Tamaño de fuente predeterminado */
 header h1 {
-    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
     color: #e69a17;
-    padding: 20px; /* Espacio entre la imagen de fondo y el título */
-    font-size: 150px; /* Tamaño del título */
-    position: absolute; /* Posición absoluta para que esté encima de la segunda imagen */
-    top: 0; /* Alinea el título en la parte superior del encabezado */
 }
-header p{
-    color: #0f0d0a;
-    font-size: 30px;
+
+/* Tamaño de fuente para pantallas pequeñas (hasta 393px) */
+@media (max-width: 393px) {
+    header h1 {
+        font-size: 4rem;
+    }
 }
+
+/* Tamaño de fuente para pantallas medianas (entre 394px y 767px) */
+@media (min-width: 394px) and (max-width: 767px) {
+    header h1 {
+        font-size: 6rem;
+    }
+}
+
+/* Tamaño de fuente para pantallas normales (768px en adelante) */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 8rem;
+    }
+}
+
+
 /* Estilos para el contenido en la parte superior */
 .content {
     font-size: 60px;
@@ -458,9 +467,85 @@ header p{
   }
 
   /* Estilo para pantallas más pequeñas (menos de 393px) */
-@media (max-width: 800px) {
+/* Estilos para pantallas grandes */
+.content2 h1.display-4 {
+    font-size: 36px; /* Tamaño de texto para pantallas grandes */
+  }
+  
+  .content2 img {
+    max-width: 100%; /* Ajustar el ancho de la imagen al contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+  }
+  
+  /* Estilos para pantallas medianas */
+  @media (max-width: 768px) {
     .content2 h1.display-4 {
-      font-size: 24px; /* Tamaño de texto personalizado para pantallas pequeñas */
+      font-size: 24px; /* Tamaño de texto para pantallas medianas */
     }
   }
+  
+  /* Estilos para pantallas pequeñas */
+  @media (max-width: 375px) {
+    .content2 h1.display-4 {
+      font-size: 18px; /* Tamaño de texto para pantallas pequeñas */
+    }
+  
+    .content2 img {
+      max-width: 80%; /* Ajustar el ancho de la imagen al contenedor */
+    }
+  }
+  h1 {
+    text-align: center;
+  }
+  .image-container {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Centra completamente */
+  }
+   .background-image {
+   
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 70vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+
+
+  
+  /*
+  .header-container {
+    background-image: url('../img/img6.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    text-align: center;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+  
+
+    @media (min-width: 393px) {
+        .background-image {
+          background-attachment: fixed;
+        }
+      }
+      @media (max-width: 393px) {
+        body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 100vh; /* Asegura que todo el contenido se muestre centrado verticalmente */
+        }
+        
+        /* Agrega estilos adicionales según sea necesario para el contenido dentro del body */
+      }
+      
+ 
+
   
