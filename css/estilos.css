@@ -499,6 +499,7 @@ header h1 {
   }
   .image-container {
     position: absolute;
+    
     top: 50%; /* Centra verticalmente */
     left: 50%; /* Centra horizontalmente */
     transform: translate(-50%, -50%); /* Centra completamente */
@@ -534,7 +535,7 @@ header h1 {
           background-attachment: fixed;
         }
       }
-      @media (max-width: 393px) {
+      @media (max-width: 340px) {
         body {
           display: flex;
           flex-direction: column;
@@ -544,6 +545,11 @@ header h1 {
         }
         
         /* Agrega estilos adicionales según sea necesario para el contenido dentro del body */
+      }
+      .responsive-image {
+     
+        max-width: 100%; /* La imagen se ajustará al ancho de la pantalla */
+        height: auto;
       }
       
  
