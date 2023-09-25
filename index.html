@@ -261,25 +261,28 @@
       }
     });
   </script>
-  <script>
-    // Obtén la URL actual
-    const url = window.location.href;
-    
-    // Busca el parámetro "slots" en la URL
-    const slotsParam = new URLSearchParams(url).get("slots");
-    
-    // Verifica si se proporcionó un número de puesto
-    if (slotsParam !== null) {
-        // Convierte el valor del parámetro en un número de puesto
-        const numeroPuesto = parseInt(slotsParam);
-        
-        // Actualiza el contenido del span con el número de puesto
-        document.getElementById("numero-reservado").textContent = numeroPuesto;
-    } else {
-        // Si no se proporcionó el parámetro "slots", muestra un mensaje predeterminado
-        document.getElementById("numero-reservado").textContent = "No se ha reservado ningún puesto.";
-    }
+<script>
+  // Obtén la URL actual
+  const url = window.location.href;
+  
+  // Busca el parámetro "puestos" en la URL
+  const puestosParam = new URLSearchParams(url).get("puestos");
+  
+  // Verifica si se proporcionó un número de puesto
+  if (puestosParam !== null) {
+      // Convierte el valor del parámetro en un número de puesto
+      const numeroPuesto = parseInt(puestosParam);
+      
+      // Actualiza el contenido del span con el número de puesto
+      document.getElementById("numero-reservado").textContent = numeroPuesto;
+  } else {
+      // Si no se proporcionó el parámetro "puestos", muestra un mensaje predeterminado
+      document.getElementById("numero-reservado").textContent = "No se ha reservado ningún puesto.";
+  }
 </script>
+
+
+
 
   
   
