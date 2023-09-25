@@ -1,177 +1,109 @@
-@charset "UTF-8";
-/* Aquí definimos las Custom properties */
-:root {
-  --negro: #393939;
-  --blanco: #ececec;
-  --sombra-ppal: #c9c9c9;
-  --sombra-sec: #ffffff;
-  --borde-negro: #00000050;
-  --marcado: rgb(127, 195, 255);
-  /* Tipografía */
-  --tipo-principal: Helvetica, Arial, sans-serif;
-}
 
-/* Las adaptamos al modo oscuro */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --negro: #ececec;
-    --blanco: #303030;
-    --sombra-ppal: #242424;
-    --sombra-sec: #3c3c3c;
-    --borde-negro: #FFFFFF50;
-  }
-}
-/* Configuramos si un usuario ha activado el modo alto contraste. (BETA) */
-/*
-    Estilos generales para que las etiquetas no contengan propiedades
-    que nos estorben y en todos los navegadores se vean correctamente
-*/
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  vertical-align: baseline;
-}
+<div class="col-md">
+<div class="form-floating">
+  <select class="form-select" id="floatingSelectGrid">
+    <option selected>Abre este menú</option>
+    <option value="1">Uno</option>
+    <option value="2">Dos</option>
+    <option value="3">Tres</option>
+  </select>
+  <label for="floatingSelectGrid">Funciona con selects</label>
+</div>
+</div>
 
-img {
-  max-width: 100%;
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center center;
-}
 
-a {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  font-size: inherit;
-}
+<div class="row g-2">
+  <div class="col-md">
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com">
+      <label for="floatingInputGrid">Correo electrónico</label>
+    </div>
+  </div>
+  <div class="col-md">
+    <div class="form-floating">
+      <select class="form-select" id="floatingSelectGrid">
+        <option selected>Abre este menú</option>
+        <option value="1">Uno</option>
+        <option value="2">Dos</option>
+        <option value="3">Tres</option>
+      </select>
+      <label for="floatingSelectGrid">Funciona con selects</label>
+    </div>
+  </div>
+</div>
 
-video {
-  max-width: 100%;
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center center;
-}
 
-p a {
-  display: inline;
-}
 
-li {
-  list-style-type: none;
-}
 
-table, tr, td {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 
-html {
-  scroll-behavior: smooth;
-}
+ <div id="formulario tex-center mt-3">
+      <label>CONFIRMA ASISTENCIA</label>
+      <form action="#" method="post">
+          <div class="campo">
+              <!-- <label for="nombre-completo">Nombre completo:</label> -->
+              <input name="nombre-completo" id="input_comp-li36wll4" class="campo-input" type="text" placeholder="Escribe tu nombre completo" required aria-required="true" aria-label="Nombre completo" value="">
+          </div>
+          <div class="campo">
+              <!-- <label for="Telefono">Teléfono:</label> -->
+              <input name="Telefono" id="input_comp-li36wll4" class="campo-input" type="text" placeholder="Escribe tu teléfono" required aria-required="true" aria-label="Telefono" value="">
+          </div>
+  
+          <!-- <label for="confirmacion">Confirmación:</label> -->
+          <select class="form-select" aria-label="Ejemplo de selección predeterminada">
+              <option selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Confirmacion</font></font></option>
+              <option value="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Si, Voy Asistir</font></font></option>
+              <option value="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No puedo Asistir</font></font></option>
+          </select>
+  
+          <div class="campo">
+              <!-- <label for="mensaje">Mensaje para los novios:</label> -->
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje para los novios"></textarea>
+          </div>
+  
+          <div class="botones">
+              <a href="https://wa.me/+584127449471" target="_blank" id="whatsapp-icon"> <!-- Reemplaza TUNUMERO con tu número de WhatsApp -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.920l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                  </svg>
+              </a>
+          </div>
+      </form>
+  </div>
 
-h1, h2, h3, h4, h5, h6, strong {
-  -webkit-hyphens: auto;
-          hyphens: auto;
-  font-weight: inherit;
-  font-size: inherit;
-}
 
-::selection {
-  background-color: var(--negro);
-  color: var(--blanco);
-}
 
-form, input, textarea, select, button {
-  font-family: inherit;
-  font-size: inherit;
-  -webkit-hyphens: auto;
-          hyphens: auto;
-  background-color: transparent;
-  display: block;
-}
 
-/* body {
-  font-family: var(--tipo-principal);
-  font-size: 100%;
-  line-height: 1.4em;
-  min-height: 100vh;
-  background-color: var(--blanco);
-  color: var(--negro);
-  -webkit-hyphens: auto;
-          hyphens: auto;
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-} */
-
-.carrousel {
-  width: 100%;
-  max-width: 120em;
-  padding: 2em;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-  overflow: hidden;
-}
-
-.carrousel .grande {
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-  padding: 0em;
-  transition: all 0.5s ease;
-  transform: translateX(0%);
-}
-
-.carrousel .img {
-  width: calc( 100% / 3 - 2em);
-  min-height: 10vh;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 1em 1em 2em var(--sombra-ppal), -1em -1em 2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-}
-
-.carrousel .puntos {
-  width: 900%;
-  margin: 1em 0 0;
-  padding: 0.4em;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.carrousel .punto {
-  width: 2em;
-  height: 2em;
-  margin: 1em 1em 0;
-  color: var(--negro);
-  transition: all 0.4s ease;
-  border-radius: 1em;
-  background-color: var(--blanco);
-  box-shadow: 0.6em 0.6em 1.2em var(--sombra-ppal), -0.6em -0.6em 1.2em var(--sombra-sec), inset 0 0 0 transparent, inset 0 0 0 transparent;
-}
-
-.carrousel .punto.activo {
-  background-color: #e2a326;
-}
+  <div class="container">
+  <div class="row g-2">
+    <div class="col-md-6">
+      <div class="form-floating">
+        <input type="email" class="form-control" id="emailInput1" placeholder="Correo electrónico" value="mdo@example.com">
+        <label for="emailInput1">Correo electrónico</label>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-floating">
+        <input type="email" class="form-control" id="emailInput2" placeholder="Correo electrónico" value="mdo@example.com">
+        <label for="emailInput2">Correo electrónico</label>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="form-floating">
+        <textarea class="form-control" id="messageTextarea" placeholder="Mensaje"></textarea>
+        <label for="messageTextarea">Mensaje</label>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="form-floating">
+        <select class="form-select" id="floatingSelectGrid">
+          <option selected>Abre este menú</option>
+          <option value="1">Uno</option>
+          <option value="2">Dos</option>
+          <option value="3">Tres</option>
+        </select>
+        <label for="floatingSelectGrid">Funciona con selects</label>
+      </div>
+    </div>
+  </div>
+  <button id="whatsapp-icon">Enviar por WhatsApp</button>
+</div>

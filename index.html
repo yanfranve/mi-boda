@@ -59,6 +59,8 @@
                
                 </p>
       </div>
+      <div id="numero-puesto">Hemos reservado para usted(es) el número <span id="numero-reservado"></span></div>
+  
   
     </div>
   
@@ -236,32 +238,51 @@
           </div>
         </div>
         <div class="botones">
-          <a href="https://wa.me/+584127449471" target="_blank" id="whatsapp-icon"> <!-- Reemplaza TUNUMERO con tu número de WhatsApp -->
-            <button type="button" class="btn btn-outline-success">Enviar WhatsApp</button>
+          <a href="https://wa.me/+573205777386" target="_blank" id="whatsapp-icon"> <!-- Reemplaza TUNUMERO con tu número de WhatsApp -->
+            <button type="button" class="btn btn-outline-success" id="enviar-btn">Enviar WhatsApp</button>
           </a>
       </div>
     
   </div>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const formulario = document.querySelector("form");
-        const whatsappIcon = document.getElementById("whatsapp-icon");
-
-        if (formulario && whatsappIcon) {
-            whatsappIcon.addEventListener("click", function(e) {
-                e.preventDefault(); // Evita que el enlace se abra en una nueva ventana/tab
-                const nombre = encodeURIComponent(formulario.querySelector('input[name="nombre-completo"]').value);
-                const confirmacion = encodeURIComponent(formulario.querySelector('select').value);
-                const mensaje = encodeURIComponent(formulario.querySelector('textarea[name="mensaje"]').value);
-                const numero = "+584127449471"; // Reemplaza TUNUMERO con tu número de WhatsApp
-
-                const url = `https://api.whatsapp.com/send?phone=${numero}&text=Nombre:%20${nombre}%0AMensaje:%20${mensaje}`;
-
-                window.open(url, "_blank");
-            });
-        }
+      const whatsappIcon = document.getElementById("whatsapp-icon");
+  
+      if (whatsappIcon) {
+        whatsappIcon.addEventListener("click", function(e) {
+          e.preventDefault();
+          const mensaje = "Hola, quiero enviarte un mensaje desde mi sitio web.";
+          const numero = "+573205777386"; // Reemplaza TUNUMERO con tu número de WhatsApp
+  
+          const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+          window.open(url, "_blank");
+         
+        });
+      }
     });
+  </script>
+  <script>
+    // Obtén la URL actual
+    const url = window.location.href;
+    
+    // Busca el parámetro "slots" en la URL
+    const slotsParam = new URLSearchParams(url).get("slots");
+    
+    // Verifica si se proporcionó un número de puesto
+    if (slotsParam !== null) {
+        // Convierte el valor del parámetro en un número de puesto
+        const numeroPuesto = parseInt(slotsParam);
+        
+        // Actualiza el contenido del span con el número de puesto
+        document.getElementById("numero-reservado").textContent = numeroPuesto;
+    } else {
+        // Si no se proporcionó el parámetro "slots", muestra un mensaje predeterminado
+        document.getElementById("numero-reservado").textContent = "No se ha reservado ningún puesto.";
+    }
 </script>
+
+  
+  
 
   
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
