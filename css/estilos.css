@@ -64,7 +64,7 @@ h1 {
 }
 
 
-.regalo {
+/* .regalo {
     width: 180%;
     padding-bottom: 40%;
     background-color: #ffffff;
@@ -73,7 +73,7 @@ h1 {
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    margin-bottom: 20px; /* Espacio entre las secciones */
+    margin-bottom: 20px; 
 }
 .regalo:hover .contenido {
     display: block;
@@ -93,7 +93,7 @@ h1 {
 .cont{
     text-align: center;
     font-size: 25px;
-    margin-top: 5px; /* Espacio superior en pantallas grandes */
+    margin-top: 5px; 
     color: #131312;
 
 }
@@ -101,9 +101,9 @@ h1 {
 .titulo {
     text-align: center;
     font-size: 40px;
-    margin-top: 40px; /* Espacio superior en pantallas grandes */
+    margin-top: 40px; 
     color: #666666;
-}
+} */
 
 /* Estilos para la sección "Sugerencia de Vestimenta" */
 .sugerencia-vestimenta {
