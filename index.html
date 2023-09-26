@@ -203,8 +203,8 @@
     </div>
     
     <div id="numero-puesto">
-      <h2 class="text-dark h5">
-        Escribeme para confirmar cuantos <span id="numero-reservado"></span> puestos tienes reservados
+      <h2 class="text-dark h5" id="mensaje-reserva">
+        Hemos reservado para usted <span id="numero-reservado"></span> puestos 
 
         
       </h2>
@@ -213,58 +213,67 @@
     <div class="container">
       <h2 class="text-dark display-6">CONFIRMA TU ASISTENCIA</h2>
       <div class="row g-2">
-        <div class="col-md-6">
-          <div class="form-floating">
-            <input name="nombre-completo" id="input_comp-li36wll4" class="campo-input" type="text" placeholder="Nombre" required aria-required="true" aria-label="Nombre completo" value="">
+          <div class="col-md-6">
+              <div class="form-floating">
+                  <input name="nombre-completo" id="input_nombre" class="campo-input" type="text" placeholder="Nombre" required aria-required="true" aria-label="Nombre completo" value="">
+              </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-floating">
-            <input name="Teléfono" id="input_comp-li36wll4" class="campo-input" type="text" placeholder="Teléfono" required aria-required="true" aria-label="Teléfono" value="">
-            
+          <div class="col-md-6">
+              <div class="form-floating">
+                  <input name="Teléfono" id="input_telefono" class="campo-input" type="text" placeholder="Teléfono" required aria-required="true" aria-label="Teléfono" value="">
+              </div>
           </div>
-        </div>
-       
-        <div class="col-md-12">
-          <div class="form-floating">
-            <select class="form-select" id="floatingSelectGrid">
-              <option selected>Confirmación</option>
-              <option value="1">Si voy Asistir</option>
-              <option value="2">No puedo Asistir</option>
-            </select>
-            
-          </div>
+  
           <div class="col-md-12">
-            <div class="form-floating">
-              <textarea class="form-control" id="messageTextarea" placeholder="Escribe tu mensaje aquí"></textarea>
-              
-            </div>
+              <div class="form-floating">
+                  <select class="form-select" id="floatingSelectGrid">
+                      <option selected>Confirmación</option>
+                      <option value=>Si voy Asistir</option>
+                      <option value=>No puedo Asistir</option>
+                  </select>
+              </div>
+              <div class="col-md-12">
+                  <div class="form-floating">
+                      <textarea class="form-control" id="messageTextarea" placeholder="Escribe tu mensaje aquí"></textarea>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="botones">
-          <a href="https://wa.me/+573205777386" target="_blank" id="whatsapp-icon"> <!-- Reemplaza TUNUMERO con tu número de WhatsApp -->
-            <button type="button" class="btn btn-outline-success" id="enviar-btn">Enviar WhatsApp</button>
-          </a>
+          <div class="botones">
+              <a href="#" id="whatsapp-icon"> <!-- Cambié el enlace href para que sea un "#" temporalmente -->
+                  <button type="button" class="btn btn-outline-success" id="enviar-btn">Enviar WhatsApp</button>
+              </a>
+          </div>
       </div>
-    
   </div>
+  
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const whatsappIcon = document.getElementById("whatsapp-icon");
-  
-      if (whatsappIcon) {
-        whatsappIcon.addEventListener("click", function(e) {
-          e.preventDefault();
-          const mensaje = "Hola, quiero enviarte un mensaje desde mi sitio web.";
-          const numero = "+573205777386"; // Reemplaza TUNUMERO con tu número de WhatsApp
-  
-          const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-          window.open(url, "_blank");
-         
-        });
-      }
+        const whatsappIcon = document.getElementById("whatsapp-icon");
+
+        if (whatsappIcon) {
+            whatsappIcon.addEventListener("click", function(e) {
+                e.preventDefault();
+                const nombre = encodeURIComponent(document.getElementById('input_nombre').value);
+                const confirmacionSelect = document.getElementById('floatingSelectGrid');
+                const confirmacionTexto = confirmacionSelect.options[confirmacionSelect.selectedIndex].text;
+                const mensaje = encodeURIComponent(document.getElementById('messageTextarea').value);
+                const numero = "+50377409104"; // Reemplaza TUNUMERO con tu número de WhatsApp
+
+                // Formato del mensaje deseado: Nombre, Confirmación (texto), Mensaje
+                const mensajeFinal = `${nombre}, ${confirmacionTexto}, Mensaje: ${mensaje}`;
+
+                const url = `https://wa.me/${numero}?text=${mensajeFinal}`;
+                window.open(url, "_blank");
+            });
+        }
     });
-  </script>
+</script>
+
+
+  
+
+
+
 <script>
   // Obtén la URL actual
   const url = window.location.search;
@@ -281,7 +290,7 @@
       document.getElementById("numero-reservado").textContent = numeroPuesto;
   } else {
       // Si no se proporcionó el parámetro "puestos", muestra un mensaje predeterminado
-      document.getElementById("numero-reservado").textContent = " ";
+      document.getElementById("mensaje-reserva").textContent = " Escribeme para confirmar cuantos puestos tienes reservados";
   }
 </script>
 
