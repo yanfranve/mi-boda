@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('../img/fondo.jpeg');
+    background-image: url(../img/fondo.jpeg);
     background-repeat: no-repeat;
     background-size: cover; /* Cubre todo el contenedor sin distorsión */
     background-position: center top; /* Centra la imagen en la parte superior */
@@ -19,6 +19,24 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* .background-image {
+  background-image: url('https://static.wixstatic.com/media/f31768_a497ac155f4d460db9940102fabfb64b~mv2.png/v1/fill/w_980,h_798,al_t,q_90,usm_0.66_1.00_0.01,enc_auto/f31768_a497ac155f4d460db9940102fabfb64b~mv2.png');
+  background-size: cover;
+  background-position: center top;
+  width: 100%;
+  height: 100vh; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+}
+
+
+.content {
+ 
+  padding: 20px;
+} */
 
 .conten {
     flex: 1; /* Hace que el contenido se expanda para llenar el espacio restante */
@@ -555,7 +573,18 @@ header h1 {
         padding: 20px;
         height: 50px; /* Puedes ajustar el valor según tus necesidades */
       }
-      
+      .svg-container {
+      margin: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Estilo adicional para limitar el ancho en pantallas pequeñas */
+    @media (max-width: 768px) {
+        .svg-container {
+            max-width: 100%;
+        }
+    }
  
 
   
