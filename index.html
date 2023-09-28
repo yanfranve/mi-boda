@@ -76,7 +76,7 @@
   
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-md mx-auto">
+        <div class="col-md-6 mx-auto">
   
           <div class="col-md">
             <div class="event text-center">
@@ -115,7 +115,7 @@
   
         </div>       
           
-             <div class="col-md mx-auto text-center mt-5 ">
+             <div class="col-md-6 mx-auto text-center mt-5 ">
         
               <div class="event tex-center">
                  
@@ -156,7 +156,7 @@
               </div>
              </div>
         
-          
+ 
         
               
         
@@ -167,9 +167,9 @@
   
   
   
-  <div class="map-button-container my-4">
+  <div class="map-button-container my-5">
            
-    <a href="https://maps.app.goo.gl/bkv2eFgAHPEazEbr8" target="_blank" class="btn btn-outline-info">Ver Mapa</a>
+    <a href="https://maps.app.goo.gl/bkv2eFgAHPEazEbr8" target="_blank" class="btn btn-outline-info btn-block">Ver Mapa</a>
   </div>
      
   
@@ -207,11 +207,11 @@
         <div class="col-md-6">
           <div class="mesa-de-regalos">
             <div class="titulo h2">Mesa de Regalo</div>
-            <div class="contenido bg-light p-4 shadow">
+            <div class="contenido p-4 shadow">
               <p class="lead text-center fs-5">
                 Su presencia es nuestro mejor regalo.<br>
                 Pero si desean hacernos un obsequio,<br>
-                agradecemos su muestra de cariño en forma de sobre.<br>
+                Agradecemos su muestra de cariño en regalo de sobre.<br>
                 Gracias.
               </p>
             </div>
@@ -243,7 +243,7 @@
     </div>
     
     <div id="numero-puesto">
-      <h2 class="text-dark h5" id="mensaje-reserva">
+      <h2 class="text-dark h5 texto-verde" id="mensaje-reserva">
         Hemos reservado para usted <span id="numero-reservado"></span> puestos 
 
         
@@ -273,12 +273,13 @@
                   </select>
               </div>
               <div class="col-md-12">
-                  <div class="form-floating">
-                      <textarea class="form-control" id="messageTextarea" placeholder="Escribe tu mensaje aquí"></textarea>
-                  </div>
+                <div class="form-floating">
+                  <textarea class="form-control custom-textarea" id="messageTextarea" placeholder=" "></textarea>
+                  <label for="messageTextarea">Escribe aca cualquier otro comentario que tengas para nosotros!</label>
+                </div>
               </div>
           </div>
-          <div class="botones">
+          <div class="botones mb-5">
               <a href="#" id="whatsapp-icon"> <!-- Cambié el enlace href para que sea un "#" temporalmente -->
                   <button type="button" class="btn btn-outline-success" id="enviar-btn">Enviar WhatsApp</button>
               </a>
@@ -294,13 +295,14 @@
             whatsappIcon.addEventListener("click", function(e) {
                 e.preventDefault();
                 const nombre = encodeURIComponent(document.getElementById('input_nombre').value);
+                const telefono = encodeURIComponent(document.getElementById('input_telefono').value);
                 const confirmacionSelect = document.getElementById('floatingSelectGrid');
                 const confirmacionTexto = confirmacionSelect.options[confirmacionSelect.selectedIndex].text;
                 const mensaje = encodeURIComponent(document.getElementById('messageTextarea').value);
                 const numero = "+50377409104"; // Reemplaza TUNUMERO con tu número de WhatsApp
 
                 // Formato del mensaje deseado: Nombre, Confirmación (texto), Mensaje
-                const mensajeFinal = `${nombre}, ${confirmacionTexto}, Mensaje: ${mensaje}`;
+                const mensajeFinal = `Soy ${nombre}, Telf. ${telefono},  Te confirmo que ${confirmacionTexto},  ${mensaje}`;
 
                 const url = `https://wa.me/${numero}?text=${mensajeFinal}`;
                 window.open(url, "_blank");
@@ -330,7 +332,9 @@
       document.getElementById("numero-reservado").textContent = numeroPuesto;
   } else {
       // Si no se proporcionó el parámetro "puestos", muestra un mensaje predeterminado
-      document.getElementById("mensaje-reserva").textContent = " Escribeme para confirmar cuantos puestos tienes reservados";
+      const mensajeReserva = document.getElementById("mensaje-reserva");
+    mensajeReserva.textContent = "Escribeme para confirmar cuantos puestos tienes reservados";
+    mensajeReserva.classList.add("texto-rojo");
   }
 </script>
 

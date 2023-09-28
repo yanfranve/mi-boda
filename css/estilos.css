@@ -268,7 +268,8 @@ h1 {
 
 
 .map-button-container {
-    margin-top: 0px; /* Espacio entre el botón y las secciones de evento */
+    margin-top: 0px;
+    /* Espacio entre el botón y las secciones de evento */
 }
 
 .mesa-de-regalos {
@@ -598,5 +599,22 @@ header {
         }
     }
  
+    .texto-verde {
+      font-family: 'Lovers Quarrel';
+      color: rgb(10, 248, 10);
+    }
+    
+    /* Estilo cuando no está enfocado */
+.form-floating label {
+  opacity: 0.5; /* Reduce la opacidad del label */
+  transform: translateY(10px); /* Mueve el label hacia arriba */
+}
 
-  
+/* Estilo cuando está enfocado */
+.form-floating textarea:focus + label {
+  opacity: 1; /* Restablece la opacidad del label */
+  transform: translateY(0); /* Restablece la posición del label */
+}
+.custom-textarea {
+  height: 1500px; /* Ajusta la altura según lo necesites */
+}
