@@ -243,7 +243,7 @@
     </div>
     
     <div id="numero-puesto">
-      <h2 class="text-dark h5 texto-verde" id="mensaje-reserva">
+      <h2 class="text-dark h5" id="mensaje-reserva">
         Hemos reservado para usted <span id="numero-reservado"></span> puestos 
 
         
@@ -268,8 +268,8 @@
               <div class="form-floating">
                   <select class="form-select" id="floatingSelectGrid">
                       <option selected>Confirmación</option>
-                      <option value=>Si voy Asistir</option>
-                      <option value=>No puedo Asistir</option>
+                      <option value=>MI Asistencia</option>
+                      <option value=>Que No puedo Asistir</option>
                   </select>
               </div>
               <div class="col-md-12">
@@ -302,7 +302,7 @@
                 const numero = "+50377409104"; // Reemplaza TUNUMERO con tu número de WhatsApp
 
                 // Formato del mensaje deseado: Nombre, Confirmación (texto), Mensaje
-                const mensajeFinal = `Soy ${nombre}, Telf. ${telefono},  Te confirmo que ${confirmacionTexto},  ${mensaje}`;
+                const mensajeFinal = `Hola Soy ${nombre}, Cel: ${telefono}, Te confirmo ${confirmacionTexto},  ${mensaje}`;
 
                 const url = `https://wa.me/${numero}?text=${mensajeFinal}`;
                 window.open(url, "_blank");
