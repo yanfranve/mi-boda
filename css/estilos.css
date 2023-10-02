@@ -84,48 +84,6 @@ h1 {
 
 }
 
-
-/* .regalo {
-    width: 180%;
-    padding-bottom: 40%;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    margin-bottom: 20px; 
-}
-.regalo:hover .contenido {
-    display: block;
-}
-
-.contenido {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.cont{
-    text-align: center;
-    font-size: 25px;
-    margin-top: 5px; 
-    color: #131312;
-
-}
-
-.titulo {
-    text-align: center;
-    font-size: 40px;
-    margin-top: 40px; 
-    color: #666666;
-} */
-
 /* Estilos para la sección "Sugerencia de Vestimenta" */
 .sugerencia-vestimenta {
     background-color: #ffffff;
@@ -241,7 +199,7 @@ h1 {
 
 /* Estilo para los elementos <p> */
 .event p {
-    font-size: 16px;
+    font-size: 18px;
     font-family: Arial, sans-serif;
 }
 .event h2,
@@ -583,8 +541,8 @@ header {
         height: auto;
       }
       .campo-input {
-        border: 2px solid #9a9696;
-        border-radius: 5px; /* Añade bordes redondeados */
+        border: 1px solid #d5d2d2 !important;
+        border-radius: 5px !important; /* Añade bordes redondeados */
         padding: 20px;
         height: 50px; /* Puedes ajustar el valor según tus necesidades */
       }
