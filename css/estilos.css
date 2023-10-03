@@ -12,7 +12,7 @@ body {
     background-position: center top; /* Centra la imagen en la parte superior */
     background-color: #FFFAF0;
     background-position: 50% 0%;
-    font-family:  Arial, sans-serif;
+    font-family: 'Merriweather',serif;
      width: 100%;
     height: 100vh;
     margin: 0; /* Elimina márgenes para que el contenido llegue al borde del marco */
@@ -22,7 +22,14 @@ body {
     display: flex;
     flex-direction: column;
 }
-
+.color-background {
+  background-color: #ffdb94; /* Color de fondo que desees */
+  opacity: 0.10; /* Ajusta la opacidad según tus preferencias */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca el fondo de color detrás del contenido */
+}
 /* .background-image {
   background-image: url('https://static.wixstatic.com/media/f31768_a497ac155f4d460db9940102fabfb64b~mv2.png/v1/fill/w_980,h_798,al_t,q_90,usm_0.66_1.00_0.01,enc_auto/f31768_a497ac155f4d460db9940102fabfb64b~mv2.png');
   background-size: cover;
@@ -50,7 +57,10 @@ body {
 h1 {
     font-family: 'Lovers Quarrel', Arial, sans-serif;
 }
-
+#messageTextarea {
+  width:935px;
+  height: 100px;
+}
 
 /* estilos.css */
 
@@ -86,8 +96,8 @@ h1 {
 
 /* Estilos para la sección "Sugerencia de Vestimenta" */
 .sugerencia-vestimenta {
-    background-color: #ffffff;
-    border: 0px solid #ffffff;
+    /* background-color: #FFFAF0; */
+    border: 0px solid #FFFAF0;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 40px; /* Espacio entre las secciones */
@@ -124,7 +134,7 @@ h1 {
     width: 800px;
     height: 400px;
     text-align: center;
-    background-color: #ffffff;
+    /* background-color: #FFFAF0; */
     padding: 40px;
     border-radius: 10px;
     color: #191717;
@@ -227,10 +237,17 @@ h1 {
 
 .map-button-container {
     margin-top: 0px;
+    text-align: center; 
     /* Espacio entre el botón y las secciones de evento */
+}
+.btn.btn-outline-info.btn-block {
+  max-width: none; /* Establece el ancho máximo deseado */
+  margin: 0 auto; /* Centra el botón horizontalmente dentro del contenedor */
+  width: 40%;
 }
 
 .mesa-de-regalos {
+  max-width: 600px;
     margin-top: 70px; /* Espacio entre la sección "Mesa de Regalos" y el botón */
 }
 
@@ -296,7 +313,7 @@ select {
     margin-bottom: 1px;
     border: 1px solid #ffffff;
     border-radius: 5px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
 }
 
 select {
