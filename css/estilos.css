@@ -58,7 +58,6 @@ h1 {
     font-family: 'Lovers Quarrel', Arial, sans-serif;
 }
 #messageTextarea {
-  width:915px;
   height: 100px;
 }
 
@@ -115,7 +114,7 @@ h1 {
 }
 
 .imagen-vestimenta img {
-    max-width: 120%;
+    max-width: 50%;
     height: auto;
 }
 
